@@ -29,3 +29,6 @@
 <type 'type'>
 >>> b.__class__.__class__
 <type 'type'>
+
+类是能产生实例的对象。
+实际上，类是元类的实例
