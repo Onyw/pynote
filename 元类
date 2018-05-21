@@ -1,0 +1,31 @@
+什么是元类？
+元类就是创建类的类，当通过type.__new__(cls, classname, bases, attrs)创建类时，cls就是该类的元类，
+它是type类或其子类。在上面，我们提到可以使用type()查看类的元类，你也可以使用__class__，他们是完全等价的。
+一切类的创建最终都会调用type.__new__(cls, classname, bases, attrs)，它会在堆中创建一个类对象，并返回
+
+>>> age = 35
+>>> age.__class__
+<type 'int'>
+>>> name = 'bob'
+>>> name.__class__
+<type 'str'>
+>>> def foo(): pass
+>>> foo.__class__
+<type 'function'>
+>>> class Bar(object): pass
+>>> b = Bar()
+>>> b.__class__
+<class '__main__.Bar'>
+
+那__class__.__class__是什么呢？__class__返回的是一个类对象，再一次__class__返回创建类对象的类，
+即类的元类，如下，这个例子中类的元类都是type类，我们平时用的绝大部分类的元类都是type，不过也有例外，
+有些类的元类是type的子类。当然，如果你对某个类一直调用__class__，那在有限次之后，它返回的就是type类了。
+
+>>> age.__class__.__class__
+<type 'type'>
+>>> name.__class__.__class__
+<type 'type'>
+>>> foo.__class__.__class__
+<type 'type'>
+>>> b.__class__.__class__
+<type 'type'>
