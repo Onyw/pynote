@@ -10,8 +10,8 @@ if __name__ == '__main__':
     n = int(input())
     arr = list(map(int, input().split()))
     print(arr)
-    temp = 0
-    bignum = 0
+    temp = -100
+    bignum = -100
     for i in arr:
         if bignum < i:
             bignum = i
