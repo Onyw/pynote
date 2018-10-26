@@ -13,7 +13,9 @@ class Solution:
                 max_num = count
                 max_element = i
         return max_element
+
+
 if __name__ == '__main__':
     a = Solution()
-    print(a.majorityElement([3,2,3]))
-    print(a.majorityElement([2,2,1,1,1,2,2]))
+    print(a.majorityElement([3, 2, 3]))
+    print(a.majorityElement([2, 2, 1, 1, 1, 2, 2]))

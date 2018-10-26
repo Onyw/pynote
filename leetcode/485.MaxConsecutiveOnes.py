@@ -18,6 +18,8 @@ class Solution:
             return flag
         else:
             return sum
+
+
 if __name__ == '__main__':
     a = Solution()
-    print(a.findMaxConsecutiveOnes([1,1,0,1,1,1]))
+    print(a.findMaxConsecutiveOnes([1, 1, 0, 1, 1, 1]))

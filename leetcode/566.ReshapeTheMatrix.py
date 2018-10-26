@@ -15,11 +15,12 @@ class Solution:
         else:
             new_nums_lst = list()
             for i in range(0, nums_lst_len, c):
-                new_nums_lst.append(nums_lst[i:i+c])
+                new_nums_lst.append(nums_lst[i:i + c])
         return new_nums_lst
+
+
 if __name__ == '__main__':
     a = Solution()
-    print(a.matrixReshape([[1,2],[3,4]], 2, 4))
+    print(a.matrixReshape([[1, 2], [3, 4]], 2, 4))
 
-#100%
-
+# 100%

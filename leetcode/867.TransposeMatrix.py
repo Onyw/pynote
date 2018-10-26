@@ -6,6 +6,7 @@ class Solution1:
         """
         return list(zip(*A))
 
+
 class Solution2:
     def transpose(self, A):
         """
@@ -18,8 +19,10 @@ class Solution2:
             a = [x[i] for x in A]
             a1.append(a)
         return a1
+
+
 if __name__ == '__main__':
     a = Solution1()
-    print(a.transpose([[1,2,3,3],[4,5,6,3],[7,8,9,3]]))
+    print(a.transpose([[1, 2, 3, 3], [4, 5, 6, 3], [7, 8, 9, 3]]))
     a = Solution2()
-    print(a.transpose([[1,2,3,3],[4,5,6,3],[7,8,9,3]]))
+    print(a.transpose([[1, 2, 3, 3], [4, 5, 6, 3], [7, 8, 9, 3]]))

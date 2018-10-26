@@ -13,9 +13,9 @@ class Solution:
         for i in range(flag, nums_len):
             nums[i] = 0
 
+
 if __name__ == '__main__':
     a = Solution()
-    nums = [0,1,0,3,12]
+    nums = [0, 1, 0, 3, 12]
     a.moveZeroes(nums)
     print(nums)
-

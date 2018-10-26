@@ -10,6 +10,8 @@ class Solution:
             flag = (b - a) // 2 + member
             if flag in c:
                 return [member, flag]
+
+
 if __name__ == '__main__':
     a = Solution()
     print(a.fairCandySwap([1, 2], [2, 3]))

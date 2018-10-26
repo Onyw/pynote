@@ -5,11 +5,11 @@ class Solution:
         :type target: int
         :rtype: List[int]
         """
-        p1, p2 = 0, len(numbers)-1
+        p1, p2 = 0, len(numbers) - 1
         while True:
             sum = numbers[p1] + numbers[p2]
             if sum == target:
-                return [p1+1, p2+1]
+                return [p1 + 1, p2 + 1]
             elif sum > target:
                 p2 -= 1
                 if p1 == p2:
@@ -22,5 +22,5 @@ class Solution:
 
 if __name__ == '__main__':
     a = Solution()
-    print(a.twoSum([2,8,11,15], 9))
-    print(a.twoSum([1,5,6,11,14], 25))
+    print(a.twoSum([2, 8, 11, 15], 9))
+    print(a.twoSum([1, 5, 6, 11, 14], 25))
