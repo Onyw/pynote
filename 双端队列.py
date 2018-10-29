@@ -1,41 +1,30 @@
-class Deque(object):
-    """双端队列"""
+class Deque:
     def __init__(self):
-        self.items = []
+        self.deque = []
+    def append_front(self, x):
+        self.deque.insert(0, x)
+
+    def pop_front(self):
+        self.deque.pop(0)
+
+    def append_rear(self, x):
+        self.deque.append(x)
+
+    def pop_rear(self):
+        self.deque.pop()
+
+    def lenD(self):
+        print(len(self.deque))
 
     def is_empty(self):
-        """判断队列是否为空"""
-        return self.items == []
+        print(len(self.deque) == 0)
 
-    def add_front(self, item):
-        """在队头添加元素"""
-        self.items.insert(0,item)
+    def clear(self):
+        self.deque.clear()
+    def show(self):
+        print(self.deque)
 
-    def add_rear(self, item):
-        """在队尾添加元素"""
-        self.items.append(item)
-
-    def remove_front(self):
-        """从队头删除元素"""
-        return self.items.pop(0)
-
-    def remove_rear(self):
-        """从队尾删除元素"""
-        return self.items.pop()
-
-    def size(self):
-        """返回队列大小"""
-        return len(self.items)
-
-
-if __name__ == "__main__":
-    deque = Deque()
-    deque.add_front(1)
-    deque.add_front(2)
-    deque.add_rear(3)
-    deque.add_rear(4)
-    print(deque.size())
-    print(deque.remove_front())
-    print(deque.remove_front())
-    print(deque.remove_rear())
-    print(deque.remove_rear())
+if __name__=='__main__':
+    a = Deque()
+    a.append_front(2)
+    a.show()
